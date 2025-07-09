@@ -1,6 +1,31 @@
 import React, { useState } from "react";
 import { theme } from "../theme";
 
+// Add CSS animations for chatbot
+const chatbotAnimations = `
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 8px 25px rgba(98, 0, 56, 0.4), 0 4px 15px rgba(255, 185, 0, 0.3);
+    }
+    50% {
+      box-shadow: 0 12px 35px rgba(98, 0, 56, 0.6), 0 6px 20px rgba(255, 185, 0, 0.5);
+    }
+    100% {
+      box-shadow: 0 8px 25px rgba(98, 0, 56, 0.4), 0 4px 15px rgba(255, 185, 0, 0.3);
+    }
+  }
+`;
+
+// Inject the CSS animation into the document
+if (typeof document !== "undefined") {
+  const style = document.createElement("style");
+  style.textContent = chatbotAnimations;
+  if (!document.head.querySelector("style[data-chatbot-animation]")) {
+    style.setAttribute("data-chatbot-animation", "true");
+    document.head.appendChild(style);
+  }
+}
+
 function ChatbotWidget() {
   const [open, setOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
