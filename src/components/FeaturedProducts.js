@@ -171,11 +171,11 @@ function ProductCard({ product }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div style={imageStyle}>{icon}</div>
+      <div style={getImageStyle(product.id)}>{icon}</div>
       <div style={productTitleStyle}>{product.title}</div>
       <div style={priceStyle}>{product.price}</div>
       <div style={locationStyle}>📍 {product.location}</div>
-      <div style={categoryStyle}>{product.category}</div>
+      <div style={getCategoryStyle(product.id)}>{product.category}</div>
     </div>
   );
 }
