@@ -1,6 +1,25 @@
 import React from "react";
 import { theme } from "../theme";
 
+// Add CSS animation for gradient background
+const gradientAnimation = `
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+`;
+
+// Inject the CSS animation into the document
+if (typeof document !== "undefined") {
+  const style = document.createElement("style");
+  style.textContent = gradientAnimation;
+  if (!document.head.querySelector("style[data-gradient-animation]")) {
+    style.setAttribute("data-gradient-animation", "true");
+    document.head.appendChild(style);
+  }
+}
+
 const featuredProducts = [
   {
     id: 1,
