@@ -48,7 +48,10 @@ const featuredProducts = [
 
 const sectionStyle = {
   padding: "3rem 2rem",
-  background: "linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)",
+  background:
+    "linear-gradient(135deg, #ff6b6b 0%, #ffd93d 25%, #6bcf7f 50%, #4dabf7 75%, #9775fa 100%)",
+  backgroundSize: "400% 400%",
+  animation: "gradientShift 8s ease infinite",
 };
 
 const containerStyle = {
