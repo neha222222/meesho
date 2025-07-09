@@ -103,7 +103,9 @@ const cardStyle = {
   background: "#fff",
   borderRadius: "12px",
   padding: "1.5rem",
-  boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+  boxShadow: "0 8px 25px rgba(116, 185, 255, 0.3)",
+  border: "2px solid transparent",
+  backgroundClip: "padding-box",
   transition: "transform 0.3s ease, box-shadow 0.3s ease",
   cursor: "pointer",
 };
