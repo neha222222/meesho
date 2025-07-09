@@ -136,15 +136,25 @@ const locationStyle = {
   marginBottom: "0.5rem",
 };
 
-const categoryStyle = {
+const getCategoryStyle = (productId) => ({
   display: "inline-block",
-  background: theme.colors.accent + "20",
-  color: theme.colors.primary,
+  background:
+    [
+      "linear-gradient(45deg, #ff6b6b, #ff8e53)",
+      "linear-gradient(45deg, #4ecdc4, #44a08d)",
+      "linear-gradient(45deg, #ffeaa7, #fab1a0)",
+      "linear-gradient(45deg, #a29bfe, #6c5ce7)",
+      "linear-gradient(45deg, #fd79a8, #e84393)",
+      "linear-gradient(45deg, #00b894, #00cec9)",
+    ][productId - 1] || "linear-gradient(45deg, #74b9ff, #0984e3)",
+  color: "#fff",
   padding: "0.25rem 0.75rem",
   borderRadius: "20px",
   fontSize: "0.8rem",
-  fontWeight: "500",
-};
+  fontWeight: "600",
+  textShadow: "0 1px 2px rgba(0,0,0,0.2)",
+  boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+});
 
 function ProductCard({ product }) {
   const [isHovered, setIsHovered] = React.useState(false);
