@@ -111,8 +111,9 @@ const cardStyle = {
 };
 
 const cardHoverStyle = {
-  transform: "translateY(-4px)",
-  boxShadow: "0 8px 25px rgba(0, 0, 0, 0.15)",
+  transform: "translateY(-8px)",
+  boxShadow:
+    "0 15px 35px rgba(116, 185, 255, 0.4), 0 5px 15px rgba(255, 107, 107, 0.2)",
 };
 
 const getImageStyle = (productId) => ({
