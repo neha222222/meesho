@@ -8,6 +8,7 @@ function LandingPage() {
     <div>
       <HeroSection />
       <HowItWorks />
+      <FeaturedProducts />
     </div>
   );
 }
