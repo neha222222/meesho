@@ -94,18 +94,27 @@ const cardHoverStyle = {
   boxShadow: "0 8px 25px rgba(0, 0, 0, 0.15)",
 };
 
-const imageStyle = {
+const getImageStyle = (productId) => ({
   width: "100%",
   height: "160px",
-  background: "linear-gradient(45deg, #e3f2fd, #bbdefb)",
+  background:
+    [
+      "linear-gradient(45deg, #ff9a9e, #fecfef)",
+      "linear-gradient(45deg, #a8edea, #fed6e3)",
+      "linear-gradient(45deg, #ffecd2, #fcb69f)",
+      "linear-gradient(45deg, #c3cfe2, #c3cfe2)",
+      "linear-gradient(45deg, #667eea, #764ba2)",
+      "linear-gradient(45deg, #f093fb, #f5576c)",
+    ][productId - 1] || "linear-gradient(45deg, #e3f2fd, #bbdefb)",
   borderRadius: "8px",
   marginBottom: "1rem",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   fontSize: "3rem",
-  color: theme.colors.primary,
-};
+  color: "#fff",
+  textShadow: "0 2px 4px rgba(0,0,0,0.3)",
+});
 
 const productTitleStyle = {
   fontSize: "1.2rem",
